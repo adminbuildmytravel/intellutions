@@ -11,19 +11,19 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#FF6B35', // Orange accent
-          dark: '#E55A2B',
-          light: '#FF8C5A',
+          DEFAULT: '#ff9f1c', // Orange accent from logo
+          dark: '#e68a00',
+          light: '#ffb44d',
         },
         dark: {
-          DEFAULT: '#1A1F3A', // Dark blue
-          light: '#2D3561',
-          lighter: '#3D4A7A',
+          DEFAULT: '#2e2577', // Purple from logo
+          light: '#3d3085',
+          lighter: '#4d3b93',
         },
         purple: {
-          DEFAULT: '#6B46C1', // Purple
-          dark: '#553C9A',
-          light: '#8B5CF6',
+          DEFAULT: '#2e2577', // Purple from logo
+          dark: '#1e1a5a',
+          light: '#3d3085',
         },
       },
       fontFamily: {

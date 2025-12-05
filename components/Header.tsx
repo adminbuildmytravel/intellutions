@@ -20,7 +20,7 @@ export default function Header() {
   }, [])
 
   const navLinks = [
-    { href: '#solutions', label: 'Solutions' },
+    { href: '#services', label: 'Services' },
     { href: '#about', label: 'About' },
     { href: '#contact', label: 'Contact' },
   ]
@@ -32,37 +32,43 @@ export default function Header() {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/90 dark:bg-dark/90 backdrop-blur-md shadow-lg'
-          : 'bg-transparent'
+          ? 'bg-white/95 dark:bg-white/95 backdrop-blur-xl shadow-lg shadow-gray-200/50 dark:shadow-gray-900/20 border-b border-gray-200/50 dark:border-gray-300/50'
+          : 'bg-white/90 dark:bg-white/90 backdrop-blur-lg border-b border-gray-200/30 dark:border-gray-300/30'
       }`}
     >
-      <nav className="container-custom py-4">
+      <nav className="container-custom py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">i</span>
+          <Link href="/" className="flex items-center group">
+            <div className="relative h-14 sm:h-16 md:h-20 w-auto">
+              <img
+                src="/images/logo.jpg"
+                alt="Intellutions"
+                className="h-full w-auto object-contain"
+                style={{ maxWidth: '220px', minWidth: '140px', filter: 'contrast(1.1)' }}
+              />
             </div>
-            <span className="text-2xl font-bold text-dark dark:text-white group-hover:text-primary transition-colors">
-              intellutions
-            </span>
           </Link>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-1">
             {navLinks.map((link, index) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                className="relative px-4 py-2 text-gray-700 dark:text-gray-700 hover:text-primary dark:hover:text-primary transition-all duration-300 font-medium text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-50 group"
               >
-                {link.label}
+                <span className="relative z-10">{link.label}</span>
                 {index === 0 && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full"
                   />
                 )}
+                <motion.div
+                  className="absolute inset-0 bg-primary/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"
+                  whileHover={{ scale: 1.05 }}
+                />
               </Link>
             ))}
           </div>
@@ -72,16 +78,16 @@ export default function Header() {
             {mounted && (
               <button
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                className="p-2 rounded-lg bg-gray-200 dark:bg-dark-light hover:bg-gray-300 dark:hover:bg-dark-lighter transition-colors"
+                className="p-2.5 rounded-lg bg-gray-100 dark:bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-200 transition-all duration-300 shadow-sm hover:shadow-md"
                 aria-label="Toggle theme"
               >
                 {theme === 'dark' ? (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                  <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                   </svg>
                 ) : (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                  <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                   </svg>
                 )}
               </button>

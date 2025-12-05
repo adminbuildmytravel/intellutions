@@ -68,10 +68,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section
-      id="contact"
-      className="section-padding bg-gray-50 dark:bg-gray-50"
-    >
+    <section id="contact" className="section-padding bg-gray-50 dark:bg-gray-50">
       <div className="container-custom">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Left Column */}
@@ -81,10 +78,10 @@ export default function ContactForm() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-gray-800 mb-4">
+            <h2 className="heading-secondary mb-4">
               Let&apos;s build the future together
             </h2>
-            <p className="text-lg text-gray-700 dark:text-gray-700 leading-relaxed">
+            <p className="text-body">
               Whether you&apos;re exploring a pilot project, partnership, or
               need tailored automation solutions - our team is ready to assist
               you.
@@ -99,7 +96,7 @@ export default function ContactForm() {
             transition={{ duration: 0.6 }}
             className="bg-white dark:bg-white rounded-2xl p-8 shadow-xl border border-gray-100 dark:border-gray-200"
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-800 mb-6">
+            <h3 className="heading-secondary text-2xl mb-6">
               Let&apos;s Start Your Project
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -110,8 +107,8 @@ export default function ContactForm() {
                   animate={{ opacity: 1, y: 0 }}
                   className={`p-4 rounded-lg ${
                     submitStatus.type === "success"
-                      ? "bg-green-50 dark:bg-green-50 text-green-800 dark:text-green-800 border border-green-200 dark:border-green-200"
-                      : "bg-red-50 dark:bg-red-50 text-red-800 dark:text-red-800 border border-red-200 dark:border-red-200"
+                      ? "bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-200 border border-green-200 dark:border-green-800"
+                      : "bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-200 border border-red-200 dark:border-red-800"
                   }`}
                 >
                   {submitStatus.message}
@@ -121,7 +118,7 @@ export default function ContactForm() {
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                 >
                   Name
                 </label>
@@ -133,14 +130,14 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 rounded-lg bg-zinc-400 text-white placeholder:text-white focus:ring-2 focus:ring-primary focus:outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-dark-light text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Your name"
                 />
               </div>
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                 >
                   Email
                 </label>
@@ -152,14 +149,14 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 rounded-lg bg-zinc-400 text-white placeholder:text-white focus:ring-2 focus:ring-primary focus:outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-dark-light text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="your.email@example.com"
                 />
               </div>
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                 >
                   Message
                 </label>
@@ -171,7 +168,7 @@ export default function ContactForm() {
                   required
                   disabled={isSubmitting}
                   rows={5}
-                  className="w-full px-4 py-3 rounded-lg bg-zinc-400 text-white placeholder:text-white focus:ring-2 focus:ring-primary focus:outline-none transition-all resize-none disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-dark-light text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Tell us about your project..."
                 />
               </div>

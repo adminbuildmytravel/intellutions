@@ -71,6 +71,7 @@ export default function ContactForm() {
     <section
       id="contact"
       className="section-padding bg-gray-50 dark:bg-gray-50"
+      style={{ fontFamily: 'var(--font-inter), system-ui, sans-serif' }}
     >
       <div className="container-custom">
         <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -99,7 +100,7 @@ export default function ContactForm() {
             transition={{ duration: 0.6 }}
             className="bg-white dark:bg-white rounded-2xl p-8 shadow-xl border border-gray-100 dark:border-gray-200"
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-800 mb-6">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-900 mb-6">
               Let&apos;s Start Your Project
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -133,7 +134,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 rounded-lg bg-zinc-400 text-white placeholder:text-white focus:ring-2 focus:ring-primary focus:outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 rounded-lg bg-dark text-white placeholder:text-purple-200 focus:ring-2 focus:ring-primary focus:outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Your name"
                 />
               </div>
@@ -152,7 +153,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 rounded-lg bg-zinc-400 text-white placeholder:text-white focus:ring-2 focus:ring-primary focus:outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 rounded-lg bg-dark text-white placeholder:text-purple-200 focus:ring-2 focus:ring-primary focus:outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -171,7 +172,7 @@ export default function ContactForm() {
                   required
                   disabled={isSubmitting}
                   rows={5}
-                  className="w-full px-4 py-3 rounded-lg bg-zinc-400 text-white placeholder:text-white focus:ring-2 focus:ring-primary focus:outline-none transition-all resize-none disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 rounded-lg bg-dark text-white placeholder:text-purple-200 focus:ring-2 focus:ring-primary focus:outline-none transition-all resize-none disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Tell us about your project..."
                 />
               </div>

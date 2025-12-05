@@ -133,7 +133,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 rounded-lg bg-zinc-400 text-white placeholder:text-white focus:ring-2 focus:ring-primary focus:outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 rounded-lg bg-zinc-400 text-white placeholder:text-purple-200 focus:ring-2 focus:ring-primary focus:outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Your name"
                 />
               </div>
@@ -152,7 +152,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 rounded-lg bg-zinc-400 text-white placeholder:text-white focus:ring-2 focus:ring-primary focus:outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 rounded-lg bg-dark text-white placeholder:text-purple-200 focus:ring-2 focus:ring-primary focus:outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -171,7 +171,7 @@ export default function ContactForm() {
                   required
                   disabled={isSubmitting}
                   rows={5}
-                  className="w-full px-4 py-3 rounded-lg bg-zinc-400 text-white placeholder:text-white focus:ring-2 focus:ring-primary focus:outline-none transition-all resize-none disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 rounded-lg bg-dark text-white placeholder:text-purple-200 focus:ring-2 focus:ring-primary focus:outline-none transition-all resize-none disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Tell us about your project..."
                 />
               </div>
