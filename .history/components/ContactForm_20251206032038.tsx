@@ -85,8 +85,9 @@ export default function ContactForm() {
             Let&apos;s build the future together
           </h2>
           <p className="text-lg text-gray-700 dark:text-gray-700 leading-relaxed">
-            Whether you&apos;re exploring a pilot project, partnership, or need
-            tailored automation solutions - our team is ready to assist you.
+            Whether you&apos;re exploring a pilot project, partnership, or
+            need tailored automation solutions - our team is ready to assist
+            you.
           </p>
         </motion.div>
 
@@ -209,8 +210,8 @@ export default function ContactForm() {
                 )}
               </button>
             </form>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

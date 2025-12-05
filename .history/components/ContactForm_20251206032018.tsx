@@ -85,8 +85,9 @@ export default function ContactForm() {
             Let&apos;s build the future together
           </h2>
           <p className="text-lg text-gray-700 dark:text-gray-700 leading-relaxed">
-            Whether you&apos;re exploring a pilot project, partnership, or need
-            tailored automation solutions - our team is ready to assist you.
+            Whether you&apos;re exploring a pilot project, partnership, or
+            need tailored automation solutions - our team is ready to assist
+            you.
           </p>
         </motion.div>
 
@@ -133,7 +134,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-100 border border-gray-200 dark:border-gray-300 text-gray-900 dark:text-gray-900 placeholder:text-gray-500 dark:placeholder:text-gray-500 focus:ring-2 focus:ring-primary focus:border-primary transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 rounded-lg bg-zinc-400 text-white placeholder:text-white focus:ring-2 focus:ring-primary focus:outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Your name"
                 />
               </div>
@@ -152,7 +153,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-100 border border-gray-200 dark:border-gray-300 text-gray-900 dark:text-gray-900 placeholder:text-gray-500 dark:placeholder:text-gray-500 focus:ring-2 focus:ring-primary focus:border-primary transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 rounded-lg bg-zinc-400 text-white placeholder:text-white focus:ring-2 focus:ring-primary focus:outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -171,7 +172,7 @@ export default function ContactForm() {
                   required
                   disabled={isSubmitting}
                   rows={5}
-                  className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-100 border border-gray-200 dark:border-gray-300 text-gray-900 dark:text-gray-900 placeholder:text-gray-500 dark:placeholder:text-gray-500 focus:ring-2 focus:ring-primary focus:border-primary transition-all resize-none disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 rounded-lg bg-zinc-400 text-white placeholder:text-white focus:ring-2 focus:ring-primary focus:outline-none transition-all resize-none disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Tell us about your project..."
                 />
               </div>
@@ -209,8 +210,8 @@ export default function ContactForm() {
                 )}
               </button>
             </form>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
