@@ -9,6 +9,7 @@ export default function Header() {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     setMounted(true)
@@ -18,6 +19,18 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Close mobile menu when clicking outside or on a link
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [isMobileMenuOpen])
 
   const navLinks = [
     { href: '#services', label: 'Services' },
@@ -50,7 +63,7 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Navigation Links */}
+          {/* Navigation Links - Desktop */}
           <div className="hidden md:flex items-center space-x-1">
             {navLinks.map((link, index) => (
               <Link
@@ -73,8 +86,9 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Theme Toggle */}
-          <div className="flex items-center space-x-4">
+          {/* Right Side - Theme Toggle & Hamburger */}
+          <div className="flex items-center space-x-3">
+            {/* Theme Toggle */}
             {mounted && (
               <button
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
@@ -92,9 +106,50 @@ export default function Header() {
                 )}
               </button>
             )}
+
+            {/* Hamburger Menu Button - Mobile Only */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2.5 rounded-lg bg-gray-100 dark:bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-200 transition-all duration-300 shadow-sm hover:shadow-md"
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? (
+                <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
           </div>
         </div>
       </nav>
+
+      {/* Mobile Menu */}
+      <motion.div
+        initial={false}
+        animate={{
+          height: isMobileMenuOpen ? 'auto' : 0,
+          opacity: isMobileMenuOpen ? 1 : 0,
+        }}
+        transition={{ duration: 0.3 }}
+        className="md:hidden overflow-hidden bg-white dark:bg-white border-t border-gray-200 dark:border-gray-300"
+      >
+        <div className="container-custom py-4 space-y-2">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block px-4 py-3 text-gray-700 dark:text-gray-700 hover:text-primary dark:hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-50 rounded-lg transition-all duration-300 font-medium"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      </motion.div>
     </motion.header>
   )
 }

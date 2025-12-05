@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center gradient-bg pt-16 md:pt-20">
+    <section className="min-h-screen flex items-center gradient-bg pt-24 md:pt-20">
       <div className="container-custom">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
