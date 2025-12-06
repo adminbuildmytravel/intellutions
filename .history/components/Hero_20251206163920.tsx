@@ -1,7 +1,7 @@
-"use client";
+'use client'
 
-import { motion } from "framer-motion";
-import Link from "next/link";
+import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 export default function Hero() {
   return (
@@ -12,12 +12,12 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
           >
             <motion.h1
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+              transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
               className="heading-primary !text-white"
             >
               AI Powered Solutions for a Smarter Future
@@ -25,16 +25,15 @@ export default function Hero() {
             <motion.p
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+              transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
               className="text-body !text-white mb-8 text-xl"
             >
-              Revolutionize your business with cutting-edge artificial
-              intelligence technologies developed by Intellutions.
+              Revolutionize your business with cutting-edge artificial intelligence technologies developed by Intellutions.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+              transition={{ duration: 0.5, delay: 0.3, ease: 'easeOut' }}
             >
               <Link href="#contact" className="btn-primary inline-block">
                 Contact Us
@@ -46,7 +45,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+            transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
             className="relative"
           >
             <div className="relative w-full h-96 flex items-center justify-center">
@@ -71,13 +70,7 @@ export default function Hero() {
                     strokeWidth="2"
                     className="text-primary"
                   />
-                  <circle
-                    cx="200"
-                    cy="200"
-                    r="60"
-                    fill="currentColor"
-                    className="text-primary opacity-50"
-                  />
+                  <circle cx="200" cy="200" r="60" fill="currentColor" className="text-primary opacity-50" />
                   <path
                     d="M150 150 Q200 100 250 150"
                     stroke="currentColor"
@@ -91,7 +84,7 @@ export default function Hero() {
                     className="text-primary"
                   />
                 </svg>
-
+                
                 {/* Glowing center chip */}
                 <motion.div
                   animate={{
@@ -101,10 +94,10 @@ export default function Hero() {
                   transition={{
                     duration: 3,
                     repeat: Infinity,
-                    ease: "easeInOut",
+                    ease: 'easeInOut',
                   }}
                   className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-primary rounded-lg flex items-center justify-center shadow-2xl"
-                  style={{ willChange: "transform, opacity" }}
+                  style={{ willChange: 'transform, opacity' }}
                 >
                   <div className="w-16 h-16 bg-white rounded opacity-90" />
                 </motion.div>
@@ -114,5 +107,6 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  );
+  )
 }
+

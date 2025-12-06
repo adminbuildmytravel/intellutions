@@ -26,7 +26,7 @@ export default function About() {
               Our team combines cutting-edge technology with deep industry expertise to deliver solutions that transform businesses and drive innovation.
             </p>
             <Link href="#contact" className="btn-primary inline-block">
-              Know More
+              Learn More
             </Link>
           </motion.div>
 

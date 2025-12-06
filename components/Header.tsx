@@ -41,8 +41,8 @@ export default function Header() {
       transition={{ duration: 0.4 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/80 backdrop-blur-md shadow-lg border-b border-gray-200/50'
-          : 'bg-white/70 backdrop-blur-sm border-b border-gray-200/30'
+          ? 'bg-white shadow-lg border-b border-gray-200/50'
+          : 'bg-white border-b border-gray-200/30'
       }`}
     >
       <nav className="container-custom py-3 md:py-4">
@@ -65,7 +65,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative px-4 py-2 text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm rounded-lg hover:bg-gray-50"
+                className="relative px-4 py-2 text-gray-700 hover:text-primary transition-all duration-300 font-medium text-base rounded-lg hover:bg-gray-50"
               >
                 <span className="relative z-10">{link.label}</span>
               </Link>
@@ -99,7 +99,7 @@ export default function Header() {
           opacity: isMobileMenuOpen ? 1 : 0,
         }}
         transition={{ duration: 0.2 }}
-        className="md:hidden overflow-hidden bg-white/90 backdrop-blur-md border-t border-gray-200"
+        className="md:hidden overflow-hidden bg-white border-t border-gray-200"
       >
         <div className="container-custom py-4 space-y-2">
           {navLinks.map((link) => (
@@ -107,7 +107,7 @@ export default function Header() {
               key={link.href}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-all duration-300 font-medium text-right"
+              className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-all duration-300 font-medium text-base text-right"
             >
               {link.label}
             </Link>
