@@ -14,10 +14,10 @@ export default function CTA() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="heading-primary text-white mb-6">
+          <h2 className="heading-primary !text-white mb-6">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-body text-gray-200 mb-8 text-xl max-w-3xl mx-auto">
+          <p className="text-body !text-white mb-8 text-xl max-w-3xl mx-auto">
             Revolutionize your business with cutting-edge artificial intelligence technologies developed by Intellutions.
           </p>
           <Link href="#contact" className="btn-primary inline-block">

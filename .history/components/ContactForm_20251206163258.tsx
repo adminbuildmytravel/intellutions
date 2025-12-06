@@ -69,7 +69,10 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-8 md:py-12 bg-gray-50">
+    <section
+      id="contact"
+      className="py-8 md:py-12 bg-gray-50"
+    >
       <div className="container-custom">
         {/* Text Content - Centered */}
         <motion.div

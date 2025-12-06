@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 dark:bg-gray-100 border-t border-gray-200 dark:border-gray-300">
+    <footer className="bg-gray-100 border-t border-gray-200">
       <div className="container-custom py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
@@ -19,11 +19,11 @@ export default function Footer() {
               <img
                 src="/images/logo.jpg"
                 alt="Intellutions"
-                className="h-12 sm:h-14 w-auto object-contain"
+                className="h-8 sm:h-12 md:h-14 w-auto object-contain"
                 style={{ maxWidth: '180px' }}
               />
             </div>
-            <p className="text-gray-600 dark:text-gray-600 text-sm leading-relaxed">
+            <p className="text-gray-600 text-sm leading-relaxed">
               UAE-based partner for AI and robotics solutions, delivering innovative technology services for businesses and communities.
             </p>
           </motion.div>
@@ -35,10 +35,10 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h3 className="text-lg font-bold text-gray-900 dark:text-gray-900 mb-4">Email</h3>
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Email</h3>
             <a
               href="mailto:info@intellutions.ae"
-              className="text-gray-600 dark:text-gray-600 hover:text-primary dark:hover:text-primary transition-colors text-sm block"
+              className="text-gray-600 hover:text-primary transition-colors text-sm block"
             >
               info@intellutions.ae
             </a>
@@ -51,10 +51,10 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="text-lg font-bold text-gray-900 dark:text-gray-900 mb-4">Phone</h3>
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Phone</h3>
             <a
               href="tel:+97126740222"
-              className="text-gray-600 dark:text-gray-600 hover:text-primary dark:hover:text-primary transition-colors text-sm block"
+              className="text-gray-600 hover:text-primary transition-colors text-sm block"
             >
               +971 2 674 0222
             </a>
@@ -67,23 +67,23 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h3 className="text-lg font-bold text-gray-900 dark:text-gray-900 mb-4">Address</h3>
-            <p className="text-gray-600 dark:text-gray-600 text-sm leading-relaxed">
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Address</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
               103, Sheika Fawzeya Bint Hamdan Al Nahyan Building, Khalifa Street, Abu Dhabi, UAE
             </p>
           </motion.div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-200 dark:border-gray-300 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-gray-600 dark:text-gray-600 mb-4 md:mb-0">
+        <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-sm text-gray-600 mb-4 md:mb-0">
             © 2025 Intellutions. All rights reserved.
           </p>
           <div className="flex space-x-4">
             {/* Social Media Icons */}
             <a
               href="#"
-              className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-200 flex items-center justify-center hover:bg-[#0077b5] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md group"
+              className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center hover:bg-[#0077b5] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md group"
               aria-label="LinkedIn"
             >
               <svg className="w-5 h-5 text-gray-600 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
@@ -92,7 +92,7 @@ export default function Footer() {
             </a>
             <a
               href="#"
-              className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-200 flex items-center justify-center hover:bg-[#1DA1F2] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md group"
+              className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center hover:bg-[#1DA1F2] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md group"
               aria-label="Twitter"
             >
               <svg className="w-5 h-5 text-gray-600 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">

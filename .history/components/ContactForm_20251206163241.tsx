@@ -69,7 +69,10 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-8 md:py-12 bg-gray-50">
+    <section
+      id="contact"
+      className="py-8 md:py-12 bg-gray-50"
+    >
       <div className="container-custom">
         {/* Text Content - Centered */}
         <motion.div
@@ -119,7 +122,7 @@ export default function ContactForm() {
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-700 mb-2"
                 >
                   Name
                 </label>
@@ -131,14 +134,14 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary focus:border-primary transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-transparent"
+                  className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-100 border border-gray-200 dark:border-gray-300 text-gray-900 dark:text-gray-900 placeholder:text-gray-500 dark:placeholder:text-gray-500 focus:ring-2 focus:ring-primary focus:border-primary transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Your name"
                 />
               </div>
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-700 mb-2"
                 >
                   Email
                 </label>
@@ -150,33 +153,14 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary focus:border-primary transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-transparent"
+                  className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-100 border border-gray-200 dark:border-gray-300 text-gray-900 dark:text-gray-900 placeholder:text-gray-500 dark:placeholder:text-gray-500 focus:ring-2 focus:ring-primary focus:border-primary transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="your.email@example.com"
                 />
               </div>
               <div>
                 <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium text-gray-700 mb-2"
-                >
-                  Phone
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
-                  disabled={isSubmitting}
-                  className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary focus:border-primary transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-transparent"
-                  placeholder="+971 XX XXX XXXX"
-                />
-              </div>
-              <div>
-                <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-700 mb-2"
                 >
                   Message
                 </label>
@@ -187,8 +171,8 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  rows={4}
-                  className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary focus:border-primary transition-all resize-none disabled:opacity-50 disabled:cursor-not-allowed bg-transparent"
+                  rows={5}
+                  className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-100 border border-gray-200 dark:border-gray-300 text-gray-900 dark:text-gray-900 placeholder:text-gray-500 dark:placeholder:text-gray-500 focus:ring-2 focus:ring-primary focus:border-primary transition-all resize-none disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Tell us about your project..."
                 />
               </div>

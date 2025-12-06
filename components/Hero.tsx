@@ -18,7 +18,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
-              className="heading-primary text-white"
+              className="heading-primary !text-white"
             >
               AI Powered Solutions for a Smarter Future
             </motion.h1>
@@ -26,7 +26,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
-              className="text-body text-gray-200 mb-8 text-xl"
+              className="text-body !text-white mb-8 text-xl"
             >
               Revolutionize your business with cutting-edge artificial intelligence technologies developed by Intellutions.
             </motion.p>

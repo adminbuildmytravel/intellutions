@@ -49,12 +49,12 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <div className="relative h-14 sm:h-16 md:h-20 w-auto">
+            <div className="relative h-10 sm:h-14 md:h-20 w-auto">
               <img
                 src="/images/logo.jpg"
                 alt="Intellutions"
                 className="h-full w-auto object-contain"
-                style={{ maxWidth: '220px', minWidth: '140px', filter: 'contrast(1.1)' }}
+                style={{ maxWidth: '220px', minWidth: '100px', filter: 'contrast(1.1)' }}
               />
             </div>
           </Link>

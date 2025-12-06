@@ -41,10 +41,10 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json()
-    const { name, email, message } = body
+    const { name, email, phone, message } = body
 
     // Validation
-    if (!name || !email || !message) {
+    if (!name || !email || !phone || !message) {
       return NextResponse.json(
         { error: 'All fields are required' },
         { status: 400 }
@@ -72,9 +72,10 @@ export async function POST(request: NextRequest) {
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <h2 style="color: #2e2577; margin-bottom: 20px;">New Contact Form Submission</h2>
-          <div style="background: #f4f7fb; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #ff9f1c;">
+          <div style="background: #f4f7fb; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #F18825;">
             <p style="margin: 10px 0;"><strong>Name:</strong> ${sanitize(name)}</p>
             <p style="margin: 10px 0;"><strong>Email:</strong> <a href="mailto:${sanitize(email)}">${sanitize(email)}</a></p>
+            <p style="margin: 10px 0;"><strong>Phone:</strong> ${sanitize(phone)}</p>
             <p style="margin: 10px 0;"><strong>Message:</strong></p>
             <p style="white-space: pre-wrap; background: white; padding: 15px; border-radius: 5px; margin-top: 10px;">${sanitize(message)}</p>
           </div>
@@ -88,6 +89,7 @@ export async function POST(request: NextRequest) {
         
         Name: ${sanitize(name)}
         Email: ${sanitize(email)}
+        Phone: ${sanitize(phone)}
         
         Message:
         ${sanitize(message)}
