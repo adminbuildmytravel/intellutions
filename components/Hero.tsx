@@ -10,30 +10,30 @@ export default function Hero() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
           >
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
               className="heading-primary text-white"
             >
               AI Powered Solutions for a Smarter Future
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
               className="text-body text-gray-200 mb-8 text-xl"
             >
               Revolutionize your business with cutting-edge artificial intelligence technologies developed by Intellutions.
             </motion.p>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              transition={{ duration: 0.5, delay: 0.3, ease: 'easeOut' }}
             >
               <Link href="#contact" className="btn-primary inline-block">
                 Contact Us
@@ -43,9 +43,9 @@ export default function Hero() {
 
           {/* Right Graphic */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
             className="relative"
           >
             <div className="relative w-full h-96 flex items-center justify-center">
@@ -88,15 +88,16 @@ export default function Hero() {
                 {/* Glowing center chip */}
                 <motion.div
                   animate={{
-                    scale: [1, 1.1, 1],
-                    opacity: [0.7, 1, 0.7],
+                    scale: [1, 1.08, 1],
+                    opacity: [0.7, 0.95, 0.7],
                   }}
                   transition={{
-                    duration: 2,
+                    duration: 3,
                     repeat: Infinity,
                     ease: 'easeInOut',
                   }}
                   className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-primary rounded-lg flex items-center justify-center shadow-2xl"
+                  style={{ willChange: 'transform, opacity' }}
                 >
                   <div className="w-16 h-16 bg-white rounded opacity-90" />
                 </motion.div>

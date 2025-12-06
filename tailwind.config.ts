@@ -11,29 +11,29 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#ff9f1c', // Orange accent from logo
-          dark: '#e68a00',
-          light: '#ffb44d',
+          DEFAULT: '#F18825', // Exact orange from logo
+          dark: '#d1761f',
+          light: '#ff9933',
         },
         dark: {
-          DEFAULT: '#2e2577', // Purple from logo
-          light: '#3d3085',
-          lighter: '#4d3b93',
+          DEFAULT: '#31287C', // Exact blue from logo
+          light: '#3d3594',
+          lighter: '#4a42ab',
         },
         purple: {
-          DEFAULT: '#2e2577', // Purple from logo
-          dark: '#1e1a5a',
-          light: '#3d3085',
+          DEFAULT: '#31287C', // Exact blue from logo
+          dark: '#251f63',
+          light: '#3d3594',
         },
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       animation: {
-        'fade-in': 'fadeIn 0.6s ease-in-out',
-        'slide-up': 'slideUp 0.6s ease-out',
-        'slide-in-left': 'slideInLeft 0.6s ease-out',
-        'slide-in-right': 'slideInRight 0.6s ease-out',
+        'fade-in': 'fadeIn 0.5s ease-out',
+        'slide-up': 'slideUp 0.5s ease-out',
+        'slide-in-left': 'slideInLeft 0.5s ease-out',
+        'slide-in-right': 'slideInRight 0.5s ease-out',
       },
       keyframes: {
         fadeIn: {
@@ -45,11 +45,11 @@ const config: Config = {
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
         slideInLeft: {
-          '0%': { transform: 'translateX(-30px)', opacity: '0' },
+          '0%': { transform: 'translateX(-20px)', opacity: '0' },
           '100%': { transform: 'translateX(0)', opacity: '1' },
         },
         slideInRight: {
-          '0%': { transform: 'translateX(30px)', opacity: '0' },
+          '0%': { transform: 'translateX(20px)', opacity: '0' },
           '100%': { transform: 'translateX(0)', opacity: '1' },
         },
       },

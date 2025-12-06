@@ -77,8 +77,8 @@ export default function ContactForm() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
           className="text-center max-w-2xl mx-auto mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-gray-800 mb-4">
@@ -92,10 +92,10 @@ export default function ContactForm() {
 
         {/* Form - Centered with max-width */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-2xl mx-auto"
         >
           <div className="bg-white dark:bg-white rounded-2xl p-8 shadow-xl border border-gray-100 dark:border-gray-200">

@@ -6,7 +6,6 @@ interface TechnologyCard {
   icon: React.ReactNode
   title: string
   description: string
-  buttonText: string
 }
 
 const technologies: TechnologyCard[] = [
@@ -18,7 +17,6 @@ const technologies: TechnologyCard[] = [
     ),
     title: 'Smart Automation',
     description: 'Automate routine tasks and increase efficiency with our AI-driven solutions.',
-    buttonText: 'Learn More',
   },
   {
     icon: (
@@ -28,7 +26,6 @@ const technologies: TechnologyCard[] = [
     ),
     title: 'Predictive Analytics',
     description: 'Leverage machine learning models to predict trends and make informed decisions.',
-    buttonText: 'Learn More',
   },
   {
     icon: (
@@ -38,20 +35,19 @@ const technologies: TechnologyCard[] = [
     ),
     title: 'Natural Language Processing',
     description: 'Enhance customer interaction through chatbots and smart language solutions.',
-    buttonText: 'Learn More',
   },
 ]
 
 export default function Technologies() {
   return (
-    <section id="services" className="section-padding bg-white dark:bg-white">
+    <section id="services" className="section-padding bg-white">
       <div className="container-custom">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-900 mb-12 text-center"
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+          className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center"
         >
           Our Services
         </motion.h2>
@@ -60,25 +56,21 @@ export default function Technologies() {
           {technologies.map((tech, index) => (
             <motion.div
               key={tech.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
               className="card group cursor-pointer"
             >
-              <div className="text-primary mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-primary mb-4 transition-transform duration-300" style={{ willChange: 'transform' }}>
                 {tech.icon}
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-900 mb-3">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
                 {tech.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-600 mb-6 text-sm leading-relaxed">
+              <p className="text-gray-600 text-sm leading-relaxed">
                 {tech.description}
               </p>
-              <button className="text-primary dark:text-primary font-semibold hover:text-primary-dark dark:hover:text-primary-dark transition-colors">
-                {tech.buttonText} →
-              </button>
             </motion.div>
           ))}
         </div>
